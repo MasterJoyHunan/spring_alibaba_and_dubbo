@@ -1,0 +1,19 @@
+server:
+  port: 9923
+
+spring:
+  application:
+    name: alibaba-cloud-and-dubbo-consumer-1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+dubbo:
+#  registry:
+#    address: spring-cloud://localhost
+  protocol:
+    name: dubbo
+    port: -1
+  cloud:
+    subscribed-services: alibaba-cloud-and-dubbo-provide-1
+
